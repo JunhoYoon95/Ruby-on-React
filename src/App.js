@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Hello from './components/Hello';
+import Welcome from './components/Welcome';
+import styles from "./App.module.css"
 
 function App() {
+  // Tutorial 1
+  // const name = "Junho";
+  // const kyurasi = {
+  //   url : "https://kyurasi.tistory.com/",
+  //   name : "Tistory"
+  // }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // Tutorial 1
+    // <div className="App">
+    //   <div>
+    //     <h1 style={{
+    //       color: "black",
+    //       backgroundColor: "yellow"
+    //     }}>
+    //       Hello, {name}. <p>age : {25 + 2}</p>
+    //     </h1>
+    //     <a href={kyurasi.url}>{kyurasi.name} </a>
+    //   </div>
+    // </div>
+    <div className='App'>
+      <Hello></Hello>
+      <div className={styles.box}>APP's BOX</div>
     </div>
   );
 }
