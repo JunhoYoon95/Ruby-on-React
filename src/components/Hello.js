@@ -1,27 +1,22 @@
-import World from "./World"
-// import "./Hello.css"
-import styles from "./Hello.module.css"
+import { useState } from "react";
 
 export default function Hello() {
 
-    function showName() {
-        console.log("Junho");
+    const [name, setName] = useState('Junho');
+    // name 은 변수, setName 은 이를 변경해주는 함수 명이라고 생각을 하면 될 것 같습니다
+
+    function changeName() {
+        setName(name === "Junho" ? "준호" : "Junho")
     }
-    // function showText(e){
-    //     console.log(e.target.value)
-    // }
+    
     return (
         <div>
-            <h1>Hello</h1>
-            {/* 함수를 만들어서 버튼에 매핑하기 */}
-            <button onClick={showName}>Show name</button>
-            {/* 함수를 직접 작성하기 */}
-            <button onClick={
-                () => console.log(30)
-            }>Show age</button>
-            <input type="text" onChange={e => {
-                console.log(e.target.value);
-            }}/>
+            <h1>State of React</h1>
+            <h2>컴포넌트의 속성값</h2>
+            <h3 id="name">
+                {name}
+            </h3>
+            <button onClick={changeName}>Change</button>
         </div>
     ) 
 }
