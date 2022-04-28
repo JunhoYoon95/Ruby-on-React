@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import dummy from "../db/data.json"
+import Word from "./Word";
 export default function Day() {
     // const day = useParams().day;  이렇게 해도 무방하니까 안헷갈리게 이렇게 하는게 좋을 듯 싶은디
     const { day }  = useParams();
@@ -12,10 +13,7 @@ export default function Day() {
     <table>
         <tbody>
             {wordList.map(word => (
-                <tr key={word.id}>
-                    <td>{word.eng} </td>
-                    <td>{word.kor} </td>
-                </tr>
+                <Word word={word} key={word.id}/>
             ))}
         </tbody>
     </table>
