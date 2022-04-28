@@ -15,6 +15,14 @@
     {
       "day": 4,
       "id": 4
+    },
+    {
+      "day": 5,
+      "id": 5
+    },
+    {
+      "day": 6,
+      "id": 6
     }
   ],
   "words": [
@@ -80,6 +88,20 @@
       "kor": "사과",
       "isDone": false,
       "id": 11
+    },
+    {
+      "day": "3",
+      "eng": "window",
+      "kor": "창문",
+      "isDone": false,
+      "id": 12
+    },
+    {
+      "day": "1",
+      "eng": "cup",
+      "kor": "컵",
+      "isDone": false,
+      "id": 14
     }
   ]
 }
