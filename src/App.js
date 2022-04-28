@@ -1,14 +1,22 @@
 import './App.css';
-import Hello from './components/Hello';
+import Day from './components/Day';
+import DayList from './components/DayList';
+import Header from './components/Header';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import EmptyPage from './components/EmptyPAge';
 
 function App() {
   return (
-    <div className='App'>
-      <Hello age={10}></Hello>
-      <Hello age={20}></Hello>
-      <Hello age={30}></Hello>
-      {/* Hello 컴포넌트를 3개를 두었습니다. 같은 것 같지만, 각각의 컴포넌트는 서로에게 영향을 주지 않습니다. */}
-    </div>
+<BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<DayList/>}/>
+          <Route path="/day/:day" element={<Day/>}/>
+          <Route path="*" element={<EmptyPage/>}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
