@@ -4,6 +4,11 @@ import useFetch from '../hooks/useFetch';
 
 export default function DayList(){
     const days = useFetch("http://localhost:3001/days");
+    if(days.length === 0){
+        // 쥰내 느린 환경을 위해 이렇게 해봅니다.
+        // Chrome - 콘솔창 - 네트워크 - 제한 없음에서 바꿔보면 됨.
+        return <span>Loading...</span>
+    }
     // const [days, setDays] = useState([]); // days 라는 state  를 만든다. 
     // //처음에는 빈 배열로 만든다. 이후 API 에서 리스트를 가져와서 바꿔주는 방식을 선택하도록 하겠다. 그러면 데이터가 바뀌면 자동으로 렌더링이 될 것이다.
 

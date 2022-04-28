@@ -4,9 +4,11 @@ export default function Header() {
     return (
         <div className="header">
             <h1>
-                <Link to="/">영어단어 React 페이지</Link>
+                <Link to="/">영어단어 </Link>
             </h1>
-            <div className="menu">
+            <div className="menu" style={{
+                marginRight : "20px"
+            }}>
                 <Link to="/create_word" className="link">
                     단어 추가
                 </Link>
